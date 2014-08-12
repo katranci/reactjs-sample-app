@@ -1,0 +1,6 @@
+{
+  "name": "ProductAggregator",
+  "dependencies": {
+    "react": "~0.11.1"
+  }
+}

@@ -1,0 +1,29 @@
+body {
+  width: 960px;
+  margin: 5% auto;
+  font-family: Arial, sans-serif;
+}
+html {
+  background: #fafafa;
+}
+.product-aggregator {
+  padding: 1em;
+  background: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+}
+.product-chooser-dropdown {
+  font-size: 1rem;
+}
+.star-rating {
+  color: #ffc107;
+  font-size: 1.5em;
+}
+
+.star-rating__star.is-full:before {
+  content: "★";
+}
+
+.star-rating__star.is-empty:before {
+  content: "☆";
+}
