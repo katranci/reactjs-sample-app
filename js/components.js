@@ -5,8 +5,7 @@ var ProductAggregator = React.createClass({displayName: 'ProductAggregator',
     return {product: null}
   },
   onProductChange: function(makeId, modelId) {
-    var product = this.fetchProduct(makeId, modelId);
-    this.setState({product: product});
+    this.fetchProduct(makeId, modelId);
   },
   fetchProduct: function(makeId, modelId) {
     var product;
