@@ -130,6 +130,13 @@ var ProductChooserDropdown = React.createClass({displayName: 'ProductChooserDrop
 });
 /** @jsx React.DOM */
 
+var ProductImage = React.createClass({displayName: 'ProductImage',
+  render: function() {
+    return React.DOM.img({src: this.props.url, className: "product-image"});
+  }
+});
+/** @jsx React.DOM */
+
 var ProductViewer = React.createClass({displayName: 'ProductViewer',
   render: function() {
     return (
@@ -137,7 +144,7 @@ var ProductViewer = React.createClass({displayName: 'ProductViewer',
             React.DOM.h1(null, this.props.product.make, " ", this.props.product.name), 
             StarRating({rating: this.props.product.starRating}), 
             React.DOM.p(null, this.props.product.desc), 
-            React.DOM.img({src: this.props.product.imgUrl, className: "product-viewer__image"})
+            ProductImage({url: this.props.product.imgUrl})
         )
     );
   }

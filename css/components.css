@@ -4,7 +4,7 @@ body {
   font-family: Arial, sans-serif;
 }
 html {
-  background: #fafafa;
+  background: #f5f5f5;
 }
 .product-aggregator {
   padding: 16px;
@@ -15,7 +15,8 @@ html {
 .product-chooser-dropdown {
   font-size: 1rem;
 }
-.product-viewer__image {
+.product-image {
+  display: block;
   width: 712px;
   height: 400px;
 }

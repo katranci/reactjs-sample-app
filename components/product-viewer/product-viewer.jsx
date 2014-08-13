@@ -7,7 +7,7 @@ var ProductViewer = React.createClass({
             <h1>{this.props.product.make} {this.props.product.name}</h1>
             <StarRating rating={this.props.product.starRating} />
             <p>{this.props.product.desc}</p>
-            <img src={this.props.product.imgUrl} className="product-viewer__image" />
+            <ProductImage url={this.props.product.imgUrl} />
         </div>
     );
   }
