@@ -2,6 +2,7 @@
   "name": "ProductAggregator",
   "dependencies": {
     "react": "~0.11.1",
-    "superagent": "~0.18.2"
+    "superagent": "~0.18.2",
+    "redacted-font": "git@github.com:christiannaths/Redacted-Font.git#a12a5fce7a7624ba7a8501e62548889528c47036"
   }
 }
