@@ -10,10 +10,12 @@ var ProductAggregator = React.createClass({displayName: 'ProductAggregator',
   },
   fetchProduct: function(makeId, modelId) {
     var product;
+
+    // collect dummy product data from window.products
     window.products.some(function(make) {
-      if (make['id'].toString() === makeId) {
+      if (make['id'] === makeId) {
         return make['models'].some(function(model) {
-          if (model['id'].toString() === modelId) {
+          if (model['id'] === modelId) {
             product = model;
             product['make'] = make.name;
             return true;
@@ -23,7 +25,16 @@ var ProductAggregator = React.createClass({displayName: 'ProductAggregator',
       }
       return false;
     });
-    return product;
+
+    // collect real product data from API
+    var url = this.props.api + '/' + makeId + '/' + modelId;
+    superagent
+        .get(url)
+        .end(function(res) {
+          product['price'] = res.body.price;
+          product['starRating'] = res.body.starRating;
+          this.setState({product: product});
+        }.bind(this));
   },
   render: function() {
     var productViewer = null;
@@ -122,11 +133,11 @@ var ProductChooserDropdown = React.createClass({displayName: 'ProductChooserDrop
 var ProductViewer = React.createClass({displayName: 'ProductViewer',
   render: function() {
     return (
-        React.DOM.div(null, 
+        React.DOM.div({className: "product-viewer"}, 
             React.DOM.h1(null, this.props.product.make, " ", this.props.product.name), 
             StarRating({rating: this.props.product.starRating}), 
             React.DOM.p(null, this.props.product.desc), 
-            React.DOM.img({src: this.props.product.imgUrl})
+            React.DOM.img({src: this.props.product.imgUrl, className: "product-viewer__image"})
         )
     );
   }

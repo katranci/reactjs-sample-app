@@ -1,5 +1,5 @@
 body {
-  width: 960px;
+  width: 744px;
   margin: 5% auto;
   font-family: Arial, sans-serif;
 }
@@ -7,13 +7,17 @@ html {
   background: #fafafa;
 }
 .product-aggregator {
-  padding: 1em;
+  padding: 16px;
   background: white;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
   border-radius: 2px;
 }
 .product-chooser-dropdown {
   font-size: 1rem;
+}
+.product-viewer__image {
+  width: 712px;
+  height: 400px;
 }
 .star-rating {
   color: #ffc107;
