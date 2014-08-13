@@ -43,7 +43,7 @@ window.products = [
         "id": "mini",
         "name": "Mini",
         "desc": "Deus persuaderes, tanquam azureus assimilatio. Regius silva superbe reperires urbs est. Hercle, impositio domesticus!, galatae! Sunt burguses prensionem audax, flavum gloses. Palus, exsul, et triticum. Cur armarium crescere? Ubi est emeritis zeta? Clemens spatiis ducunt ad boreas. Genetrixs resistere in camerarius chremisa! Habena noster gabalium est. Est domesticus lixa, cesaris. Compaters sunt lumens de flavum exemplar. Vae.",
-        "imgUrl": "http://www.topgear.com/uk/assets/cms/3d327f2f-0020-463b-bbbd-2f9774699d93/Image.jpg?p=130520_02:21"
+        "imgUrl": "http://www.topgear.com/uk/assets/cms/6180af3b-f38d-4551-9f47-ed12566c2259/Thumbnail.jpeg?p=120517_04:54"
       }
     ]
   }

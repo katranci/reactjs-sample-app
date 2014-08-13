@@ -36,6 +36,18 @@ html {
   width: 712px;
   height: 400px;
 }
+.product-price {
+  font-size: 1.9em;
+  color: #26a69a;
+}
+.product-viewer__title {
+  margin-bottom: 10px;
+}
+
+.product-viewer > .product-price {
+  display: block;
+  margin-bottom: 10px;
+}
 .star-rating {
   color: #ffc107;
   font-size: 1.5em;

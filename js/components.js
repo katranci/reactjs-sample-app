@@ -148,11 +148,21 @@ var ProductImage = React.createClass({displayName: 'ProductImage',
 });
 /** @jsx React.DOM */
 
+var ProductPrice = React.createClass({displayName: 'ProductPrice',
+  render: function() {
+    var rawPrice = this.props.price;
+    var displayPrice = rawPrice.toLocaleString("en-GB", {style: "currency", currency: "GBP"});
+    return React.DOM.span({className: "product-price"}, displayPrice);
+  }
+});
+/** @jsx React.DOM */
+
 var ProductViewer = React.createClass({displayName: 'ProductViewer',
   render: function() {
     return (
         React.DOM.div({className: "product-viewer"}, 
-            React.DOM.h1(null, this.props.product.make, " ", this.props.product.name), 
+            React.DOM.h1({className: "product-viewer__title"}, this.props.product.make + ' ' + this.props.product.name), 
+            ProductPrice({price: this.props.product.price}), 
             StarRating({rating: this.props.product.starRating}), 
             ProductDescription(null, 
               React.DOM.p(null, this.props.product.desc)

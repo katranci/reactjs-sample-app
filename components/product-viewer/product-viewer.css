@@ -1,0 +1,8 @@
+.product-viewer__title {
+  margin-bottom: 10px;
+}
+
+.product-viewer > .product-price {
+  display: block;
+  margin-bottom: 10px;
+}
